@@ -369,22 +369,14 @@
     \item OceanSim maintains a versatile design as an extension to NVIDIA Issac Sim~\cite{issacsim}. By embracing the fast-growing NVIDIA Omniverse ecosystem~\cite{Nvidia_omniverse}, our simulator naturally bridges the gap between robot learning and underwater robotics to facilitate the development and deployment of embodied AI techniques for underwater applications.
     \item OceanSim will be available open-source to allow the research community to contribute in a collaborative paradigm. -->
           <p>
-            OceanSim incorporates advanced physics-based rendering techniques to accurately model underwater visual and acoustic sensors.
-          </p>
-          <p>
-            OceanSim achieves significantly faster rendering speeds compared to alternative simulation engines.
-          </p>
-          <p>
-            OceanSim maintains a versatile design as an extension to NVIDIA Issac Sim. By embracing the fast-growing NVIDIA Omniverse ecosystem, our simulator naturally bridges the gap between robot learning and underwater robotics to facilitate the development and deployment of embodied AI techniques for underwater applications.
-          </p>
-          <p>
-            OceanSim will be available open-source to allow the research community to contribute in a collaborative paradigm.
+            FishDetector-R1 is a two-stage detect-to-count pipeline integrates an MLLM with SAM 2 to jointly perform detection, segmentation, and counting. 
+            Reinforcement fine-tuning with GRPO and weak point-level supervision adapts the MLLM, ensuring consistency between detection and counting while enabling pixel-wise segmentation with only sparse labels.
           </p>
         </div>
       </div>
     </div>
     <!-- add an image docs/static/images/Overall_Diagram.svg -->
-    <img src="./static/images/pipline.jpg" alt="FishDetector-R1 Overview" style="width: 100%; height: auto;">
+    <img src="/static/images/pipline.jpg" alt="FishDetector-R1 Overview" style="width: 100%; height: auto;">
   </div>
 </section>
 
@@ -397,16 +389,16 @@
         <h2 class="title is-3">Results</h2>
         <div class="content has-text-justified">
           <p>
-            OceanSim helps to build digital twins effectively. We show a comparison against a real world log side by side.
+            FishDetector-R1 achieves state-of-the-art performance on the DeepFish dataset. We show a comparison against a real world log side by side.
           </p>
         </div>
       </div>
     </div>
     <!-- add a video ./static/videos/oceansim_demo_website.mov -->
-    <video id="results" autoplay muted loop playsinline height="100%">
+    <!-- <video id="results" autoplay muted loop playsinline height="100%">
       <source src="./static/videos/oceansim_demo_website.mov"
               type="video/mp4">
-    </video>
+    </video> -->
     
   </div>
 

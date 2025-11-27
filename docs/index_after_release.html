@@ -286,11 +286,12 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          Significant work has been done on advancing localization and mapping in underwater environments.
-          Still, state-of-the-art methods are challenged by low-texture environments, which is common for underwater settings. This makes it difficult to use existing methods in diverse, real-world scenes.
-          In this paper, we present TURTLMap, a novel solution that focuses on Textureless Underwater environments through a Real-Time Localization and Mapping method.
-          We show that this method is low-cost, and capable of tracking the robot accurately, while constructing a dense map of a low-textured environment in real-time.
-          We evaluate the proposed method using real-world data collected in an indoor water tank with a motion capture system and ground truth map reference. Qualitative and quantitative results validate the proposed system achieves accurate and robust localization and precise dense mapping, even when subject to wave conditions.
+          Analyzing underwater fish imagery is critical for ecological monitoring but remains difficult due to visual degradation and costly annotations. 
+          We introduce FishDetector-R1, a unified MLLM-based framework for fish detection, segmentation, and counting under weak supervision. 
+          On the DeepFish dataset, our framework achieves substantial gains over baselines, improving AP by 20\% and mIoU by 10\%, while reducing MAE by 30\% and GAME by 35\%. 
+          These improvements stem from two key components: a novel detect-to-count prompt that enforces spatially consistent detections and counts, and Reinforcement Learning from Verifiable Reward (RLVR) with a complementary scalable paradigm leveraging sparse point labels. 
+          Ablation studies further validate the effectiveness of this reward design. Moreover, the improvement generalizes well to other underwater datasets, confirming strong cross-domain robustness. 
+          Overall, FishDetector-R1 provides a reliable and scalable solution for accurate marine visual understanding via weak supervision.
         </div>
       </div>
     </div>

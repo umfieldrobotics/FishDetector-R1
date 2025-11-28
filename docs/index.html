@@ -331,7 +331,7 @@
         <div class="content has-text-justified">
           Analyzing underwater fish imagery is critical for ecological monitoring but remains difficult due to visual degradation and costly annotations. 
           We introduce <strong>FishDetector-R1</strong>, a unified MLLM-based framework for fish detection, segmentation, and counting under weak supervision. 
-          On the DeepFish dataset, our framework achieves substantial gains over baselines, improving AP by 20% and mIoU by 10%, while reducing MAE by 30\% and GAME by 35%. 
+          On the DeepFish dataset, our framework achieves substantial gains over baselines, improving AP by 20% and mIoU by 10%, while reducing MAE by 30% and GAME by 35%. 
           These improvements stem from two key components: a novel detect-to-count prompt that enforces spatially consistent detections and counts, and Reinforcement Learning from Verifiable Reward (RLVR) with a complementary scalable paradigm leveraging sparse point labels. 
           Ablation studies further validate the effectiveness of this reward design. Moreover, the improvement generalizes well to other underwater datasets, confirming strong cross-domain robustness. 
           Overall, <strong>FishDetector-R1</strong> provides a reliable and scalable solution for accurate marine visual understanding via weak supervision.
@@ -389,15 +389,30 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Results</h2>
+        <h2 class="title is-3">Qualitative Results on DeepFish Dataset</h2>
         <div class="content has-text-justified">
           <p>
-            Qualitative Comparison between Qwen2.5-VL and FishDetector-R1. On a challenging scene from DeepFish FishLoc, our detect-to-count strategy enables more accurate localization and structured outputs.
+            The proposed FishDetector-R1 framework achieves state-of-the-art performance on the DeepFish dataset, demonstrating its effectiveness in handling complex underwater environments.
           </p>
         </div>
       </div>
     </div>
-    <img src="./static/images/prompt_qualitative.svg" alt="Prompt Qualitative Results" style="width: 100%; height: auto;">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <img src="./static/images/prompt_qualitative.svg" alt="Prompt Qualitative Results" style="width: 100%; height: auto;">
+      <p style="margin-top: 0.5rem; font-style: italic;">Qualitative Comparison between Qwen2.5-VL and FishDetector-R1. On a challenging scene from DeepFish FishLoc, our detect-to-count strategy enables more accurate localization and structured outputs.</p>
+    </div>
+
+    <div style="text-align: center;">
+      <img src="./static/images/seg_quality.svg" alt="Segmentation Quality" style="width: 100%; height: auto;">
+      <p style="margin-top: 0.5rem; font-style: italic;">Detection and segmentation results of FishDetector-R1 across diverse underwater habitats. The model demonstrates robustness to
+        variations in background complexity, lighting conditions, and water color, highlighting its applicability to real-world marine environments.</p>
+    </div>
+    
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <img src="./static/images/supp_2.svg" alt="Supplementary Figure 2" style="width: 100%; height: auto;">
+      <p style="margin-top: 0.5rem; font-style: italic;">Qualitative detection results on the DeepFish FishLoc test set. In crowded scenes with many small fish, FishDetector-R1 delivers
+        more accurate counts and tighter localizations. Best viewed in color and zoomed in.</p>
+    </div>
     
   </div>
 </section>
@@ -407,7 +422,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">New Section</h2>
+        <h2 class="title is-3">Zero-shot Transfer on SUIM Dataset</h2>
         <div class="content has-text-justified">
           <p>
             Qualitative results on the SUIM dataset. 
@@ -418,8 +433,14 @@
       </div>
     </div>
     <div class="subplot-container" style="width: 100%; display: flex; flex-direction: column; gap: 10px;">
-      <img src="./static/images/SUIM_seg_v2.svg" alt="Subplot 1" style="width: 100%; height: auto;">
-      <img src="./static/images/SUIM_Fish_v2.svg" alt="Subplot 2" style="width: 100%; height: auto;">
+      <div style="text-align: center;">
+        <img src="./static/images/SUIM_seg_v2.svg" alt="Subplot 1" style="width: 100%; height: auto;">
+        <p style="margin-top: 0.5rem; font-weight: bold;">(a)</p>
+      </div>
+      <div style="text-align: center;">
+        <img src="./static/images/SUIM_Fish_v2.svg" alt="Subplot 2" style="width: 100%; height: auto;">
+        <p style="margin-top: 0.5rem; font-weight: bold;">(b)</p>
+      </div>
     </div>
   </div>
 </section>

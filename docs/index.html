@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="OceanSim: A GPU-Accelerated Underwater Robot Perception Simulation Framework">
+  <meta name="keywords" content="OceanSim">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🌊OceanSim: A GPU-Accelerated Underwater Robot Perception Simulation Framework</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/frog-logo.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <!-- <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a> -->
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://umfieldrobotics.github.io/TURTLMap/">
+            TURTLMap
+          </a>
+          <a class="navbar-item" href="https://fieldrobotics.engin.umich.edu/research">
+            Our Lab - FRoG
+          </a>
+          <!-- <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+           <!-- use smaller title size -->
+          <h1 class="title is-3 publication-title">OceanSim: A GPU-Accelerated Underwater Robot Perception Simulation Framework</h1>
+          <h2 class="subtitle is-4" style="margin-bottom:0.15em;">
+            IROS 2025
+          </h2>
+          <!-- Featured by NVIDIA Robotics -->
+          <!-- pull this up right under the subtitle -->
+          <p class="has-text-centered featured-note"
+          style="margin-top:0; color:red; font-size:1.1em; font-weight:bold;">
+          <a href="https://www.linkedin.com/posts/nvidiarobotics_robotics-underwaterrobotics-simulation-activity-7313986055894880257-Dfmq?utm_source=share&utm_medium=member_desktop&rcm=ACoAACB8Y7sB7ikB6wVGPL5NrxYkNwk8RTEJ-3Y"
+            target="_blank"
+            style="color:red; text-decoration:underline;">
+          featured by NVIDIA robotics
+          </a>
+          </p>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://song-jingyu.github.io/">Jingyu Song</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/haoyuma2002814//">Haoyu Ma</a><sup>1*</sup>,
+            <span class="author-block">
+              <a href="https://www.obagoren.com/">Onur Bagoren</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.advaiths.com/">Advaith Sethuraman</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://sites.google.com/umich.edu/yitingzhang/">Yiting Zhang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://fieldrobotics.engin.umich.edu/">Katherine A. Skinner</a><sup>1</sup>
+            </span>
+            <!-- <span class="author-block">
+              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+            </span> -->
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>*</sup>Equal Contribution</span>
+            <!-- <span class="author-block"><sup>†</sup>Corresponding Author</span> -->
+            <span class="author-block"><sup>1</sup>University of Michigan</span>
+          </div>
+
+
+          <!-- create a new column with a button pointing to the subscription form -->
+          <!-- create a new column with a button pointing to the subscription form -->
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/pdf/2503.01074"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2503.01074"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/2_1MYjeZ9lY?si=wwugo9UCCG8JRlAv"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/umfieldrobotics/OceanSim"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+                <!-- New Twitter placeholder -->
+              <span class="link-block">
+                <a href="https://x.com/justsimonjust/status/1907793513183367232"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                  <span>X/Twitter</span>
+                </a>
+              </span>
+
+              <!-- New LinkedIn placeholder -->
+              <span class="link-block">
+                <a href="https://www.linkedin.com/posts/jingyu-song-93763a132_robotics-underwaterrobotics-simulation-activity-7313545874091958272-qnwC?utm_source=share&utm_medium=member_desktop&rcm=ACoAACB8Y7sB7ikB6wVGPL5NrxYkNwk8RTEJ-3Y"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                  </span>
+                  <span>LinkedIn</span>
+                </a>
+              </span>
+              <!-- LinkedIn post, use news icon -->
+              <!-- <span class="link-block">
+                <a href="https://www.linkedin.com/posts/jingyu-song-93763a132_i-am-happy-to-share-that-our-paper-activity-7227132379373473792-Ci1H?utm_source=share&utm_medium=member_desktop"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-linkedin"></i>
+                  </span>
+                  <span>LinkedIn Post</span>
+                  </a>
+              </span> -->
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div> -->
+          </div>
+
+          <!-- create a new column with a button pointing to the subscription form -->
+          <!-- create a new column with a button pointing to the subscription form -->
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKWMhE4L6R4jjvEw_bfMtLigXbv5WZeijDah5vk2SpQZW1hA/viewform?usp=header"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <span>Subscribe for the Latest OceanSim News!</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/oceansim_gif.mp4"
+                type="video/mp4">
+      </video>
+      <!-- add image docs/static/images/pitch.svg-->
+      <h2 class="subtitle has-text-centered">
+        We present OceanSim, a high-fidelity and GPU-accelerated underwater simulator.
+      </h2>
+      <!-- <img src="./static/images/pitch.png" alt="OceanSim" style="width: 100%; height: auto;"> -->
+    </div>
+  </div>
+</section>
+
+<section class="video-section" style="text-align: center;">
+  <div class="video-container" style="display: inline-block;">
+    <iframe width="900" height="506"
+            src="https://www.youtube.com/embed/2_1MYjeZ9lY?si=wwugo9UCCG8JRlAv"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          Underwater simulators offer support for building robust
+          underwater perception solutions. Significant work has
+          recently been done to develop new simulators and to advance
+          the performance of existing underwater simulators. Still,
+          there remains room for improvement on physics-based
+          underwater sensor modeling and rendering efficiency. In
+          this paper, we propose OceanSim, a high-fidelity
+          GPU-accelerated underwater simulator to address this
+          research gap. We propose advanced physics-based rendering
+          techniques to reduce the sim-to-real gap for underwater
+          image simulation. We develop OceanSim to fully leverage the
+          accelerated computing advantages of GPU and achieve
+          real-time imaging sonar rendering and fast synthetic data
+          generation. We evaluate the capabilities and realism of
+          OceanSim using real-world data to provide qualitative and
+          quantitative results. 
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<!-- Overview section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+          <!-- \item OceanSim incorporates advanced physics-based rendering techniques to accurately model underwater visual and acoustic sensors.
+    \item OceanSim achieves significantly faster rendering speeds compared to alternative simulation engines.
+    \item OceanSim maintains a versatile design as an extension to NVIDIA Issac Sim~\cite{issacsim}. By embracing the fast-growing NVIDIA Omniverse ecosystem~\cite{Nvidia_omniverse}, our simulator naturally bridges the gap between robot learning and underwater robotics to facilitate the development and deployment of embodied AI techniques for underwater applications.
+    \item OceanSim will be available open-source to allow the research community to contribute in a collaborative paradigm. -->
+          <p>
+            OceanSim incorporates advanced physics-based rendering techniques to accurately model underwater visual and acoustic sensors.
+          </p>
+          <p>
+            OceanSim achieves significantly faster rendering speeds compared to alternative simulation engines.
+          </p>
+          <p>
+            OceanSim maintains a versatile design as an extension to NVIDIA Issac Sim. By embracing the fast-growing NVIDIA Omniverse ecosystem, our simulator naturally bridges the gap between robot learning and underwater robotics to facilitate the development and deployment of embodied AI techniques for underwater applications.
+          </p>
+          <p>
+            OceanSim will be available open-source to allow the research community to contribute in a collaborative paradigm.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- add an image docs/static/images/Overall_Diagram.svg -->
+    <img src="./static/images/oceansim_overall_framework.svg" alt="OceanSim Overview" style="width: 100%; height: auto;">
+  </div>
+</section>
+
+<!-- Results section -->
+ <!-- OceanSim helps to build digital twins effectively -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            OceanSim helps to build digital twins effectively. We show a comparison against a real world log side by side.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- add a video ./static/videos/oceansim_demo_website.mov -->
+    <video id="results" autoplay muted loop playsinline height="100%">
+      <source src="./static/videos/oceansim_demo_website.mov"
+              type="video/mp4">
+    </video>
+    
+  </div>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{song2025oceansim,
+      title={OceanSim: A GPU-Accelerated Underwater Robot Perception Simulation Framework}, 
+      author={Jingyu Song and Haoyu Ma and Onur Bagoren and Advaith V. Sethuraman and Yiting Zhang and Katherine A. Skinner},
+      year={2025},
+      booktitle={2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+      year={2025},
+      organization={IEEE}
+}</code></pre>
+  </div>
+</section>
+
+<!-- cite nerfies project page https://github.com/nerfies/nerfies.github.io -->
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page is modified based on <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

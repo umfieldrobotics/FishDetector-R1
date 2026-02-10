@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="FishDetector-R1: Unified MLLM-Based Framework with Reinforcement Fine-Tuning for Weakly Supervised Fish Detection, Segmentation, and Counting">
+    content="FishDetector-R1: Unified MLLM-Based Framework with Reinforcement Fine-Tuning for Weakly Supervised Fish Detection, Segmentation, and Counting">
   <meta name="keywords" content="FishDetector-R1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>🐟FishDetector-R1: Unified MLLM-Based Framework with Reinforcement Fine-Tuning for Weakly Supervised Fish Detection, Segmentation, and Counting</title>
+  <title>🐟FishDetector-R1: Unified MLLM-Based Framework with Reinforcement Fine-Tuning for Weakly Supervised Fish
+    Detection, Segmentation, and Counting</title>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
@@ -21,15 +23,13 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/frog-logo.svg">
 
@@ -39,62 +39,68 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
+
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <!-- <a class="navbar-item" href="https://keunhong.com">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <!-- <a class="navbar-item" href="https://keunhong.com">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
       </a> -->
 
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://umfieldrobotics.github.io/TURTLMap/">
-            TURTLMap
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
           </a>
-          <a class="navbar-item" href="https://fieldrobotics.engin.umich.edu/research">
-            Our Lab - FRoG
-          </a>
-          <!-- <a class="navbar-item" href="https://latentfusion.github.io">
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://umfieldrobotics.github.io/TURTLMap/">
+              TURTLMap
+            </a>
+            <!-- add OceanSim -->
+            <a class="navbar-item" href="https://umfieldrobotics.github.io/OceanSim/">
+              OceanSim
+            </a>
+            <a class="navbar-item" href="https://fieldrobotics.engin.umich.edu/research">
+              Our Lab - FRoG
+            </a>
+            <!-- <a class="navbar-item" href="https://latentfusion.github.io">
             LatentFusion
           </a>
           <a class="navbar-item" href="https://photoshape.github.io">
             PhotoShape
           </a> -->
+          </div>
         </div>
       </div>
+
     </div>
-
-  </div>
-</nav>
+  </nav>
 
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-           <!-- use smaller title size -->
-          <h1 class="title is-3 publication-title">FishDetector-R1: Unified MLLM-Based Framework with Reinforcement Fine-Tuning for Weakly Supervised Fish Detection, Segmentation, and Counting</h1>
-          <h2 class="subtitle is-4" style="margin-bottom:0.15em;">
-            Available in December 2025
-          </h2>
-          <!-- Featured by NVIDIA Robotics -->
-          <!-- pull this up right under the subtitle -->
-          <!-- <p class="has-text-centered featured-note"
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- use smaller title size -->
+            <h1 class="title is-3 publication-title">FishDetector-R1: Unified MLLM-Based Framework with Reinforcement
+              Fine-Tuning for Weakly Supervised Fish Detection, Segmentation, and Counting</h1>
+            <h2 class="subtitle is-4" style="margin-bottom:0.15em;">
+              Under Review
+            </h2>
+            <!-- Featured by NVIDIA Robotics -->
+            <!-- pull this up right under the subtitle -->
+            <!-- <p class="has-text-centered featured-note"
           style="margin-top:0; color:red; font-size:1.1em; font-weight:bold;">
           <a href="https://www.linkedin.com/posts/nvidiarobotics_robotics-underwaterrobotics-simulation-activity-7313986055894880257-Dfmq?utm_source=share&utm_medium=member_desktop&rcm=ACoAACB8Y7sB7ikB6wVGPL5NrxYkNwk8RTEJ-3Y"
             target="_blank"
@@ -102,17 +108,17 @@
           featured by NVIDIA robotics
           </a>
           </p> -->
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://hhads-dev.github.io/">Yi Liu</a><sup>1*</sup>,</span>
-            <span class="author-block">
-              <a href="https://song-jingyu.github.io/">Jingyu Song</a><sup>1*</sup>,</span>
-            <span class="author-block">
-              <a href="https://www.linkedin.com/in/vedanthk/">Vedanth Kallakuri</a><sup>1</sup>
-            <span class="author-block">
-              <a href="https://fieldrobotics.engin.umich.edu/">Katherine A. Skinner</a><sup>1</sup>
-            </span>
-            <!-- <span class="author-block">
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://hhads-dev.github.io/">Yi Liu</a><sup>1*</sup>,</span>
+              <span class="author-block">
+                <a href="https://song-jingyu.github.io/">Jingyu Song</a><sup>1*</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/vedanthk/">Vedanth Kallakuri</a><sup>1</sup>
+                <span class="author-block">
+                  <a href="https://fieldrobotics.engin.umich.edu/">Katherine A. Skinner</a><sup>1</sup>
+                </span>
+                <!-- <span class="author-block">
               <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
             </span>
             <span class="author-block">
@@ -124,21 +130,21 @@
             <span class="author-block">
               <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
             </span> -->
-          </div>
+            </div>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>*</sup>Equal Contribution</span>
-            <!-- <span class="author-block"><sup>†</sup>Corresponding Author</span> -->
-            <span class="author-block"><sup>1</sup>University of Michigan</span>
-          </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>*</sup>Equal Contribution</span>
+              <!-- <span class="author-block"><sup>†</sup>Corresponding Author</span> -->
+              <span class="author-block"><sup>1</sup>University of Michigan</span>
+            </div>
 
 
-          <!-- create a new column with a button pointing to the subscription form -->
-          <!-- create a new column with a button pointing to the subscription form -->
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <!-- <span class="link-block">
+            <!-- create a new column with a button pointing to the subscription form -->
+            <!-- create a new column with a button pointing to the subscription form -->
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <!-- <span class="link-block">
                 <a href="https://arxiv.org/pdf/2503.01074"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -147,48 +153,44 @@
                   <span>Paper</span>
                 </a>
               </span> -->
-              <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
                       <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
+                    </span>
+                    <span>arXiv</span>
                   </a>
-              </span>
+                </span>
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (coming soon)</span>
+                  </a>
+                </span>
                 <!-- New Twitter placeholder -->
-              <span class="link-block">
-                <a href=""
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fab fa-twitter"></i>
-                  </span>
-                  <span>X/Twitter</span>
-                </a>
-              </span>
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-twitter"></i>
+                    </span>
+                    <span>X/Twitter</span>
+                  </a>
+                </span>
 
-              <!-- New LinkedIn placeholder -->
-              <!-- <span class="link-block">
+                <!-- New LinkedIn placeholder -->
+                <!-- <span class="link-block">
                 <a href="https://www.linkedin.com/posts/jingyu-song-93763a132_robotics-underwaterrobotics-simulation-activity-7313545874091958272-qnwC?utm_source=share&utm_medium=member_desktop&rcm=ACoAACB8Y7sB7ikB6wVGPL5NrxYkNwk8RTEJ-3Y"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -197,8 +199,8 @@
                   <span>LinkedIn</span>
                 </a>
               </span> -->
-              <!-- LinkedIn post, use news icon -->
-              <!-- <span class="link-block">
+                <!-- LinkedIn post, use news icon -->
+                <!-- <span class="link-block">
                 <a href="https://www.linkedin.com/posts/jingyu-song-93763a132_i-am-happy-to-share-that-our-paper-activity-7227132379373473792-Ci1H?utm_source=share&utm_medium=member_desktop"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -207,8 +209,8 @@
                   <span>LinkedIn Post</span>
                   </a>
               </span> -->
-              <!-- Dataset Link. -->
-              <!-- <span class="link-block">
+                <!-- Dataset Link. -->
+                <!-- <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -217,11 +219,11 @@
                   <span>Data</span>
                   </a>
             </div> -->
-          </div>
+              </div>
 
-          <!-- create a new column with a button pointing to the subscription form -->
-          <!-- create a new column with a button pointing to the subscription form -->
-          <!-- <div class="column has-text-centered">
+              <!-- create a new column with a button pointing to the subscription form -->
+              <!-- create a new column with a button pointing to the subscription form -->
+              <!-- <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKWMhE4L6R4jjvEw_bfMtLigXbv5WZeijDah5vk2SpQZW1hA/viewform?usp=header"
@@ -234,24 +236,26 @@
               </span>
             </div>
           </div> -->
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="./static/images/intro_fig_2.svg" alt="FishDetector-R1" style="width: 80%; height: auto; display: block; margin: 0 auto;">
-      <h2 class="subtitle has-text-centered">
-        We present FishDetector-R1, a unified MLLM-based framework with reinforcement fine-tuning for weakly supervised fish detection, segmentation, and counting.
-      </h2>
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="./static/images/intro_fig_2.svg" alt="FishDetector-R1"
+          style="width: 80%; height: auto; display: block; margin: 0 auto;">
+        <h2 class="subtitle has-text-centered">
+          We present FishDetector-R1, a unified MLLM-based framework with reinforcement fine-tuning for weakly
+          supervised fish detection, segmentation, and counting.
+        </h2>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- <section class="video-section" style="text-align: center;">
+  <!-- <section class="video-section" style="text-align: center;">
   <div class="video-container" style="display: inline-block;">
     <iframe width="900" height="506"
             src="https://www.youtube.com/embed/2_1MYjeZ9lY?si=wwugo9UCCG8JRlAv"
@@ -264,7 +268,7 @@
   </div>
 </section> -->
 
-<!-- <section class="hero is-light is-small">
+  <!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -322,26 +326,33 @@
 </section> -->
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          Analyzing underwater fish imagery is critical for ecological monitoring but remains difficult due to visual degradation and costly annotations. 
-          We introduce <strong>FishDetector-R1</strong>, a unified MLLM-based framework for fish detection, segmentation, and counting under weak supervision. 
-          On the DeepFish dataset, our framework achieves substantial gains over baselines, improving AP by 20% and mIoU by 10%, while reducing MAE by 30% and GAME by 35%. 
-          These improvements stem from two key components: a novel detect-to-count prompt that enforces spatially consistent detections and counts, and Reinforcement Learning from Verifiable Reward (RLVR) with a complementary scalable paradigm leveraging sparse point labels. 
-          Ablation studies further validate the effectiveness of this reward design. Moreover, the improvement generalizes well to other underwater datasets, confirming strong cross-domain robustness. 
-          Overall, <strong>FishDetector-R1</strong> provides a reliable and scalable solution for accurate marine visual understanding via weak supervision.
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            Analyzing underwater fish imagery is critical for ecological monitoring but remains difficult due to visual
+            degradation and costly annotations.
+            We introduce <strong>FishDetector-R1</strong>, a unified MLLM-based framework for fish detection,
+            segmentation, and counting under weak supervision.
+            On the DeepFish dataset, our framework achieves substantial gains over baselines, improving AP by 20% and
+            mIoU by 10%, while reducing MAE by 30% and GAME by 35%.
+            These improvements stem from two key components: a novel detect-to-count prompt that enforces spatially
+            consistent detections and counts, and Reinforcement Learning from Verifiable Reward (RLVR) with a
+            complementary scalable paradigm leveraging sparse point labels.
+            Ablation studies further validate the effectiveness of this reward design. Moreover, the improvement
+            generalizes well to other underwater datasets, confirming strong cross-domain robustness.
+            Overall, <strong>FishDetector-R1</strong> provides a reliable and scalable solution for accurate marine
+            visual understanding via weak supervision.
+          </div>
         </div>
       </div>
-    </div>
-    <!--/ Abstract. -->
+      <!--/ Abstract. -->
 
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
+      <!-- Paper video. -->
+      <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
@@ -350,124 +361,147 @@
         </div>
       </div>
     </div> -->
-    <!--/ Paper video. -->
-  </div>
-</section>
+      <!--/ Paper video. -->
+    </div>
+  </section>
 
-<!-- Overview section -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Overview</h2>
-        <div class="content has-text-justified">
-          <!-- \item OceanSim incorporates advanced physics-based rendering techniques to accurately model underwater visual and acoustic sensors.
+  <!-- Overview section -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Overview</h2>
+          <div class="content has-text-justified">
+            <!-- \item OceanSim incorporates advanced physics-based rendering techniques to accurately model underwater visual and acoustic sensors.
     \item OceanSim achieves significantly faster rendering speeds compared to alternative simulation engines.
     \item OceanSim maintains a versatile design as an extension to NVIDIA Issac Sim~\cite{issacsim}. By embracing the fast-growing NVIDIA Omniverse ecosystem~\cite{Nvidia_omniverse}, our simulator naturally bridges the gap between robot learning and underwater robotics to facilitate the development and deployment of embodied AI techniques for underwater applications.
     \item OceanSim will be available open-source to allow the research community to contribute in a collaborative paradigm. -->
-          <p>
-            We propose FishDetector-R1, the first unified framework to integrate an MLLM with a segmentation foundation model for comprehensive marine fish analysis (detection, segmentation, and counting) using only weak, point-level supervision.
-          </p>
-          <p>
-            We design a novel joint detect–to-count learning paradigm to adapt foundation models to the challenging underwater domain in a complementary manner. 
-            By formulating sparse point labels as verifiable rewards within an RLVR framework, our method enforces spatial and numerical consistency, enabling the generation of high-quality masks from minimal annotation.
-          </p>
-          <p>
-            We conduct extensive quantitative and qualitative experiments on the DeepFish dataset to demonstrate the effectiveness of the proposed FishDetector-R1 pipeline, achieving performance competitive with and even surpassing fully supervised methods. We further validate its strong generalization through zero-shot transfer on another underwater dataset.
-          </p>
+            <p>
+              We propose FishDetector-R1, the first unified framework to integrate an MLLM with a segmentation
+              foundation model for comprehensive marine fish analysis (detection, segmentation, and counting) using only
+              weak, point-level supervision.
+            </p>
+            <p>
+              We design a novel joint detect–to-count learning paradigm to adapt foundation models to the challenging
+              underwater domain in a complementary manner.
+              By formulating sparse point labels as verifiable rewards within an RLVR framework, our method enforces
+              spatial and numerical consistency, enabling the generation of high-quality masks from minimal annotation.
+            </p>
+            <p>
+              We conduct extensive quantitative and qualitative experiments on the DeepFish dataset to demonstrate the
+              effectiveness of the proposed FishDetector-R1 pipeline, achieving performance competitive with and even
+              surpassing fully supervised methods. We further validate its strong generalization through zero-shot
+              transfer on another underwater dataset.
+            </p>
+          </div>
         </div>
       </div>
+      <!-- add an image docs/static/images/Overall_Diagram.svg -->
+      <img src="./static/images/pipline_v3.svg" alt="FishDetector-R1 Overview" style="width: 100%; height: auto;">
     </div>
-    <!-- add an image docs/static/images/Overall_Diagram.svg -->
-    <img src="./static/images/pipline_v3.svg" alt="FishDetector-R1 Overview" style="width: 100%; height: auto;">
-  </div>
-</section>
+  </section>
 
-<!-- Results section -->
- <!-- OceanSim helps to build digital twins effectively -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Qualitative Results on DeepFish Dataset</h2>
-        <div class="content has-text-justified">
-          <p>
-            The proposed FishDetector-R1 framework achieves state-of-the-art performance on the DeepFish dataset, demonstrating its effectiveness in handling complex underwater environments.
-          </p>
+  <!-- Results section -->
+  <!-- OceanSim helps to build digital twins effectively -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Qualitative Results on DeepFish Dataset</h2>
+          <div class="content has-text-justified">
+            <p>
+              The proposed FishDetector-R1 framework achieves state-of-the-art performance on the DeepFish dataset,
+              demonstrating its effectiveness in handling complex underwater environments.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div style="text-align: center; margin-bottom: 2rem;">
-      <img src="./static/images/prompt_qualitative.svg" alt="Prompt Qualitative Results" style="width: 100%; height: auto;">
-      <p style="margin-top: 0.5rem; font-style: italic;">Qualitative Comparison between Qwen2.5-VL and FishDetector-R1. On a challenging scene from DeepFish FishLoc, our detect-to-count strategy enables more accurate localization and structured outputs.</p>
-    </div>
-
-    <div style="text-align: center;">
-      <img src="./static/images/seg_quality.svg" alt="Segmentation Quality" style="width: 100%; height: auto;">
-      <p style="margin-top: 0.5rem; font-style: italic;">Detection and segmentation results of FishDetector-R1 across diverse underwater habitats. The model demonstrates robustness to
-        variations in background complexity, lighting conditions, and water color, highlighting its applicability to real-world marine environments.</p>
-    </div>
-    
-    <div style="text-align: center; margin-bottom: 2rem;">
-      <img src="./static/images/supp_2.svg" alt="Supplementary Figure 2" style="width: 100%; height: auto;">
-      <p style="margin-top: 0.5rem; font-style: italic;">Qualitative detection results on the DeepFish FishLoc test set. In crowded scenes with many small fish, FishDetector-R1 delivers
-        more accurate counts and tighter localizations. Best viewed in color and zoomed in.</p>
-    </div>
-    
-  </div>
-</section>
-
-<!-- New Section -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Zero-shot Transfer on SUIM Dataset</h2>
-        <div class="content has-text-justified">
-          <p>
-            Qualitative results on the SUIM dataset. 
-            <strong>(a)</strong> Our model generalizes to the SUIM domain and successfully identifies fish species that share visual similarities with those in DeepFish. 
-            <strong>(b)</strong> Visualization of additional fish and vertebrate categories present in SUIM but absent in DeepFish, demonstrating the model's cross-domain adaptability and retention of original MLLM-level generalizability.
-          </p>
-        </div>
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <img src="./static/images/prompt_qualitative.svg" alt="Prompt Qualitative Results"
+          style="width: 100%; height: auto;">
+        <p style="margin-top: 0.5rem; font-style: italic;">Qualitative Comparison between Qwen2.5-VL and
+          FishDetector-R1. On a challenging scene from DeepFish FishLoc, our detect-to-count strategy enables more
+          accurate localization and structured outputs.</p>
       </div>
-    </div>
-    <div class="subplot-container" style="width: 100%; display: flex; flex-direction: column; gap: 10px;">
+
       <div style="text-align: center;">
-        <img src="./static/images/SUIM_seg_v2.svg" alt="Subplot 1" style="width: 100%; height: auto;">
-        <p style="margin-top: 0.5rem; font-weight: bold;">(a)</p>
+        <img src="./static/images/seg_quality.svg" alt="Segmentation Quality" style="width: 100%; height: auto;">
+        <p style="margin-top: 0.5rem; font-style: italic;">Detection and segmentation results of FishDetector-R1 across
+          diverse underwater habitats. The model demonstrates robustness to
+          variations in background complexity, lighting conditions, and water color, highlighting its applicability to
+          real-world marine environments.</p>
       </div>
-      <div style="text-align: center;">
-        <img src="./static/images/SUIM_Fish_v2.svg" alt="Subplot 2" style="width: 100%; height: auto;">
-        <p style="margin-top: 0.5rem; font-weight: bold;">(b)</p>
+
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <img src="./static/images/supp_2.svg" alt="Supplementary Figure 2" style="width: 100%; height: auto;">
+        <p style="margin-top: 0.5rem; font-style: italic;">Qualitative detection results on the DeepFish FishLoc test
+          set. In crowded scenes with many small fish, FishDetector-R1 delivers
+          more accurate counts and tighter localizations. Best viewed in color and zoomed in.</p>
       </div>
-    </div>
-  </div>
-</section>
 
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code></code></pre>
-  </div>
-</section>
-
-<!-- cite nerfies project page https://github.com/nerfies/nerfies.github.io -->
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
     </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This page is modified based on <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
-          </p>
+  </section>
+
+  <!-- New Section -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Zero-shot Transfer on SUIM Dataset</h2>
+          <div class="content has-text-justified">
+            <p>
+              Qualitative results on the SUIM dataset.
+              <strong>(a)</strong> Our model generalizes to the SUIM domain and successfully identifies fish species
+              that share visual similarities with those in DeepFish.
+              <strong>(b)</strong> Visualization of additional fish and vertebrate categories present in SUIM but absent
+              in DeepFish, demonstrating the model's cross-domain adaptability and retention of original MLLM-level
+              generalizability.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="subplot-container" style="width: 100%; display: flex; flex-direction: column; gap: 10px;">
+        <div style="text-align: center;">
+          <img src="./static/images/SUIM_seg_v2.svg" alt="Subplot 1" style="width: 100%; height: auto;">
+          <p style="margin-top: 0.5rem; font-weight: bold;">(a)</p>
+        </div>
+        <div style="text-align: center;">
+          <img src="./static/images/SUIM_Fish_v2.svg" alt="Subplot 2" style="width: 100%; height: auto;">
+          <p style="margin-top: 0.5rem; font-weight: bold;">(b)</p>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{liu2025fishdetector,
+  title={FishDetector-R1: Unified MLLM-Based Framework with Reinforcement Fine-Tuning for Weakly Supervised Fish Detection, Segmentation, and Counting},
+  author={Liu, Yi and Song, Jingyu and Kallakuri, Vedanth and Skinner, Katherine A},
+  journal={arXiv preprint arXiv:2512.05996},
+  year={2025}
+}</code></pre>
+    </div>
+  </section>
+
+  <!-- cite nerfies project page https://github.com/nerfies/nerfies.github.io -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page is modified based on <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 </body>
+
 </html>
